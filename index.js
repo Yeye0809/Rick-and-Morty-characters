@@ -1,6 +1,6 @@
     const CardsContainer = document.getElementById('cards');
     const nextButton = document.getElementById('nextButton');
-    //const prevButton = document.getElementById('backButton');
+    const backTopBtn = document.getElementById('btn-back-top');
 
     
     let urlChar = 'https://rickandmortyapi.com/api/character?page=1';
@@ -97,7 +97,7 @@
 
     const changePage = ( {info} ) => {
       nextButton.setAttribute('data-url', info.next );
-      prevButton.setAttribute('data-url', info.prev );
+      
 
     }
 
@@ -110,6 +110,31 @@
         fetchCharacter(value);
       }
     })
+
+    
+
+
+
+     window.addEventListener('scroll', (e) => {
+         const scrollDowm = window.scrollY;
+         console.log(scrollDowm)
+        
+         hideButton(scrollDowm);
+         backTop(scrollDowm);
+
+     })
+
+     const hideButton = (scrollDowm) => {
+
+       ( scrollDowm < 1000 ) ? backTopBtn.style.display = 'none' : null ;
+
+     }
+
+     const backTop = (scrollDowm) => {
+
+       ( scrollDowm > 1000 ) ? backTopBtn.style.display = 'block' : null ;
+
+     }
 
     // prevButton.addEventListener('click', (e)=>{
     //   if(e.target.classList.contains('btn')){

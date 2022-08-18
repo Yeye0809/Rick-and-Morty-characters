@@ -13,7 +13,7 @@ header{
     background-size: cover;
 }
 #header-container {
-    text-align: center;
+    
     font-family: 'DynaPuff', cursive;
     
 }
@@ -21,6 +21,7 @@ header{
 main{
     background-color: #202329;
     padding-top: 30px;
+   
 }
 
 #cards .card {
@@ -45,3 +46,22 @@ main{
     color: white;
 }
 
+#container-btn {
+    height: 100px;
+}
+
+#btn-back-top{  
+    display: none;
+    text-align: center;   
+    width: 30px;
+    height: 30px;
+    position: sticky;
+    padding: 2px;
+    top: 600px;
+    z-index: 1;
+}
+#btn-back-top a  {
+    font-size: 30px;
+    text-decoration: none;
+    
+}
