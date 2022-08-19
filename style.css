@@ -13,7 +13,7 @@ header{
     background-size: cover;
 }
 #header-container {
-    
+    text-align: center;
     font-family: 'DynaPuff', cursive;
     
 }
@@ -24,10 +24,19 @@ main{
    
 }
 
-#cards .card {
-    border: 1px solid #46484e;
+#cards {
+    max-width: 85%;
+    
     
 }
+
+#cards .card {
+    border: 1px solid #46484e;
+    margin-right: 15px;
+    background-color: #3c3e44;
+    
+}
+
 
 #cards .card-body {
     background-color: #3c3e44;
@@ -57,11 +66,13 @@ main{
     height: 30px;
     position: sticky;
     padding: 2px;
-    top: 600px;
+    margin-left: 5px;
+    top: calc(100vh - 15vh);
     z-index: 1;
 }
 #btn-back-top a  {
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
+    color: #8cc7e9;
     
 }

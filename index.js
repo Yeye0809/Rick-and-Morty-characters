@@ -2,6 +2,8 @@
     const nextButton = document.getElementById('nextButton');
     const backTopBtn = document.getElementById('btn-back-top');
 
+    const layout = 'col-sm-5 col-md-3 col-lg-2 '
+
     
     let urlChar = 'https://rickandmortyapi.com/api/character?page=1';
         
@@ -48,7 +50,7 @@
         const imageContainer = document.createElement('div');
         const imageCard = document.createElement('img');
 
-        card.setAttribute('class', 'card mb-3')
+        card.setAttribute('class', `card ${layout}  mb-3`)
         imageCard.setAttribute('src', char.image);
         imageCard.setAttribute('class', 'card-img-top');
         imageContainer.appendChild(imageCard);
